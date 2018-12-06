@@ -115,7 +115,7 @@ gulp.task('extras', () => {
 
 gulp.task('watch', ['styles', 'components_style', 'js', 'components_script', 'phpmailer', 'browser-sync'], function() {
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-	gulp.watch(['components/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['components/**/*.js', 'app/js/*.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload)
 });
 
